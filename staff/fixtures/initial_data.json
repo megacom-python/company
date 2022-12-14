@@ -1,0 +1,447 @@
+[
+  {
+    "model": "staff.department",
+    "pk": 1,
+    "fields": {
+      "title": "Services"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 2,
+    "fields": {
+      "title": "Legal"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 3,
+    "fields": {
+      "title": "Sales"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 4,
+    "fields": {
+      "title": "Marketing"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 5,
+    "fields": {
+      "title": "Research and Development"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 6,
+    "fields": {
+      "title": "Training"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 7,
+    "fields": {
+      "title": "Human Resources"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 8,
+    "fields": {
+      "title": "Engineering"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 9,
+    "fields": {
+      "title": "Product Management"
+    }
+  },
+  {
+    "model": "staff.department",
+    "pk": 10,
+    "fields": {
+      "title": "Support"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 1,
+    "fields": {
+      "department": 6,
+      "email": "karen33@example.com",
+      "full_name": "Karen Parker",
+      "date_of_birth": "1995-03-01"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 2,
+    "fields": {
+      "department": 6,
+      "email": "ihorne@example.net",
+      "full_name": "Irwin Horne",
+      "date_of_birth": "1984-04-22"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 3,
+    "fields": {
+      "department": 4,
+      "email": "arandolph@example.com",
+      "full_name": "Anvy Randolph",
+      "date_of_birth": "1973-09-17"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 4,
+    "fields": {
+      "department": 1,
+      "email": "calderonmelissa@example.org",
+      "full_name": "Melissa Calderon",
+      "date_of_birth": "2001-12-03"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 5,
+    "fields": {
+      "department": 4,
+      "email": "richardcrawford@example.net",
+      "full_name": "Richard Crawford",
+      "date_of_birth": "1981-03-08"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 6,
+    "fields": {
+      "department": 5,
+      "email": "paul56@example.net",
+      "full_name": "Paul Hudson",
+      "date_of_birth": "2000-01-28"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 7,
+    "fields": {
+      "department": 8,
+      "email": "inoble@example.net",
+      "full_name": "Icarus Peterson",
+      "date_of_birth": "1985-07-12"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 8,
+    "fields": {
+      "department": 1,
+      "email": "shelleyjones@example.org",
+      "full_name": "Shelley Jones",
+      "date_of_birth": "1981-01-04"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 9,
+    "fields": {
+      "department": 9,
+      "email": "courtney32@example.com",
+      "full_name": "Courtney Spears",
+      "date_of_birth": "1977-04-02"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 10,
+    "fields": {
+      "department": 5,
+      "email": "bergwhitney@example.com",
+      "full_name": "Whitney Berg",
+      "date_of_birth": "1998-10-19"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 11,
+    "fields": {
+      "department": 3,
+      "email": "brandonswanson@example.com",
+      "full_name": "Brandon Swanson",
+      "date_of_birth": "1979-04-30"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 12,
+    "fields": {
+      "department": 2,
+      "email": "doneill@example.net",
+      "full_name": "Mark Spectre",
+      "date_of_birth": "2001-01-08"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 13,
+    "fields": {
+      "department": 6,
+      "email": "robert36@example.org",
+      "full_name": "Robert Harrison",
+      "date_of_birth": "1978-04-15"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 14,
+    "fields": {
+      "department": 1,
+      "email": "mirandastacy@example.org",
+      "full_name": "Miranda Stacy",
+      "date_of_birth": "1985-03-15"
+    }
+  },
+  {
+    "model": "staff.employee",
+    "pk": 15,
+    "fields": {
+      "department": 7,
+      "email": "williamschad@example.org",
+      "full_name": "Williams Henry",
+      "date_of_birth": "2001-05-05"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 1,
+    "fields": {
+      "employee": 6,
+      "amount": 58235,
+      "created_at": "2022-05-12T23:26:27Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 2,
+    "fields": {
+      "employee": 13,
+      "amount": 36510,
+      "created_at": "2021-03-16T21:52:50Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 3,
+    "fields": {
+      "employee": 15,
+      "amount": 40995,
+      "created_at": "2022-12-07T11:40:10Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 4,
+    "fields": {
+      "employee": 15,
+      "amount": 52473,
+      "created_at": "2022-11-08T21:32:06Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 5,
+    "fields": {
+      "employee": 6,
+      "amount": 42731,
+      "created_at": "2021-12-08T13:51:31Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 6,
+    "fields": {
+      "employee": 7,
+      "amount": 14160,
+      "created_at": "2022-03-02T14:12:18Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 7,
+    "fields": {
+      "employee": 14,
+      "amount": 46073,
+      "created_at": "2020-05-08T03:58:40Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 8,
+    "fields": {
+      "employee": 2,
+      "amount": 672480,
+      "created_at": "2021-05-26T15:32:37Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 9,
+    "fields": {
+      "employee": 9,
+      "amount": 32182,
+      "created_at": "2022-04-26T05:31:12Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 10,
+    "fields": {
+      "employee": 11,
+      "amount": 46991,
+      "created_at": "2022-10-26T09:55:20Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 11,
+    "fields": {
+      "employee": 10,
+      "amount": 11068,
+      "created_at": "2021-09-06T14:31:14Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 12,
+    "fields": {
+      "employee": 15,
+      "amount": 182872,
+      "created_at": "2021-08-05T20:40:34Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 13,
+    "fields": {
+      "employee": 14,
+      "amount": 27484,
+      "created_at": "2022-07-23T08:02:25Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 14,
+    "fields": {
+      "employee": 15,
+      "amount": 35136,
+      "created_at": "2020-11-16T16:36:55Z"
+    }
+  },
+  {
+    "model": "staff.salary",
+    "pk": 15,
+    "fields": {
+      "employee": 11,
+      "amount": 53124,
+      "created_at": "2021-01-08T11:16:49Z"
+    }
+  },
+  {
+    "model": "staff.bonus",
+    "pk": 1,
+    "fields": {
+      "employee": 8,
+      "amount": 24602,
+      "created_at": "2021-06-21T22:35:38Z",
+      "reason": "reward"
+    }
+  },
+  {
+    "model": "staff.bonus",
+    "pk": 2,
+    "fields": {
+      "employee": 7,
+      "amount": 27613,
+      "created_at": "2022-02-05T03:43:33Z",
+      "reason": "reward"
+    }
+  },
+  {
+    "model": "staff.bonus",
+    "pk": 3,
+    "fields": {
+      "employee": 3,
+      "amount": 2137,
+      "created_at": "2022-12-03T05:20:54Z",
+      "reason": "grant"
+    }
+  },
+  {
+    "model": "staff.bonus",
+    "pk": 4,
+    "fields": {
+      "employee": 8,
+      "amount": 35370,
+      "created_at": "2022-02-09T01:39:07Z",
+      "reason": "reward"
+    }
+  },
+  {
+    "model": "staff.bonus",
+    "pk": 5,
+    "fields": {
+      "employee": 7,
+      "amount": 19697,
+      "created_at": "2022-01-29T20:38:25Z",
+      "reason": "reward"
+    }
+  },
+  {
+    "model": "staff.penalty",
+    "pk": 1,
+    "fields": {
+      "employee": 14,
+      "amount": 5076,
+      "created_at": "2022-09-25T10:09:48Z",
+      "reason": "absence"
+    }
+  },
+  {
+    "model": "staff.penalty",
+    "pk": 2,
+    "fields": {
+      "employee": 9,
+      "amount": 8981,
+      "created_at": "2022-08-01T18:22:14Z",
+      "reason": "absence"
+    }
+  },
+  {
+    "model": "staff.penalty",
+    "pk": 3,
+    "fields": {
+      "employee": 6,
+      "amount": 4075,
+      "created_at": "2022-12-20T19:41:54Z",
+      "reason": "absence"
+    }
+  },
+  {
+    "model": "staff.penalty",
+    "pk": 4,
+    "fields": {
+      "employee": 1,
+      "amount": 8317,
+      "created_at": "2022-08-30T01:32:51Z",
+      "reason": "absence"
+    }
+  }
+]
