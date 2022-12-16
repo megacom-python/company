@@ -7,11 +7,13 @@ class Department(models.Model):
     def __str__(self):
         return self.title
 
+
 class Employee(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     email = models.EmailField(max_length=255)
     full_name = models.CharField(max_length=255)
     date_of_birth = models.DateField()
+    manager = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.full_name
