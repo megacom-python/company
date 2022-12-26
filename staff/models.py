@@ -13,7 +13,7 @@ class Employee(models.Model):
     email = models.EmailField(max_length=255)
     full_name = models.CharField(max_length=255)
     date_of_birth = models.DateField()
-    manager = models.ForeignKey("self", on_delete=models.SET_NULL, null=True)
+    manager = models.ForeignKey("self", on_delete=models.SET_NULL, null=True, related_name="subordinates")
 
     def __str__(self):
         return self.full_name
