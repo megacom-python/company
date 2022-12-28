@@ -2,8 +2,8 @@ from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from .serializers import MostExpensiveDepartmentSerializer, AgeDifferenceSerializer
 from .models import Department, Employee, Salary
-from django.db.models import Subquery, Count, Sum, Q, OuterRef
-
+from django.db.models import Subquery, Count, Sum, Q, OuterRef, Avg
+from django.db.models import DurationField, IntegerField, F, Func
 
 class MostExpensiveDepartmentAPIView(ListAPIView):
     serializer_class = MostExpensiveDepartmentSerializer
@@ -45,6 +45,36 @@ class MostExpensiveDepartmentAPIView(ListAPIView):
     #     serializer = self.get_serializer(instance, many=False)
     #     return Response(serializer.data)
 
+
+class AgeYears(Func):
+    template = 'EXTRACT (YEAR FROM %(function)s(%(expressions)s))'
+    function = 'AGE'
+    output_field = IntegerField()
+
+
 class AgeDifferenceView(ListAPIView):
-    queryset = Employee.objects.filter(subordinates__isnull=False)
+    # queryset = Employee.objects.filter(subordinates__isnull=False).distinct()
     serializer_class = AgeDifferenceSerializer
+
+    def get_queryset(self):
+        queryset = (
+            Employee.objects
+            # .prefetch_related("subordinates")
+            .filter(subordinates__isnull=False)
+            .annotate(
+                diff=AgeYears(F("date_of_birth")) - Avg(AgeYears(F("subordinates__date_of_birth")))
+            )
+        )
+        """
+        SELECT m.email
+         , EXTRACT(YEAR FROM AGE(m.date_of_birth))              AS age
+         , EXTRACT(YEAR FROM AGE(m.date_of_birth)) - AVG(s.age) AS diff
+        FROM staff_employee AS m
+                 JOIN (SELECT manager_id, EXTRACT(YEAR FROM AGE(staff_employee.date_of_birth)) AS age
+                       FROM staff_employee
+                       WHERE manager_id IS NOT NULL) AS s
+                      ON m.id = s.manager_id
+        GROUP BY m.email, m.date_of_birth
+        """
+        print(queryset.query)
+        return queryset

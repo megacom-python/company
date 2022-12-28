@@ -18,14 +18,15 @@ class MostExpensiveDepartmentSerializer(serializers.ModelSerializer):
 
 
 class AgeDifferenceSerializer(serializers.ModelSerializer):
-    diff = serializers.SerializerMethodField()
+    diff = serializers.ReadOnlyField()
+    age = serializers.ReadOnlyField()
 
     class Meta:
         model = Employee
         fields = "__all__"
 
-    def get_diff(self, obj: Employee):
-        manager_age = age(obj.date_of_birth)
-        subordinate_ages = [age(sub.date_of_birth) for sub in obj.subordinates.all()]
-        avg_age = sum(subordinate_ages)/len(subordinate_ages)
-        return manager_age - avg_age
+    # def get_diff(self, obj: Employee):
+    #     manager_age = age(obj.date_of_birth)
+    #     subordinate_ages = [age(sub.date_of_birth) for sub in obj.subordinates.all()]
+    #     avg_age = sum(subordinate_ages)/len(subordinate_ages)
+    #     return manager_age - avg_age
